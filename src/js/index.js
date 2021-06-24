@@ -1,27 +1,15 @@
-import React, { Component } from "react";
+//import react into the bundle
+import React from "react";
 import ReactDOM from "react-dom";
+
+//include bootstrap npm library into the bundle
 import "bootstrap";
+
+//include your index.scss file into the bundle
 import "../styles/index.scss";
+
+//import your own components
 import { Home } from "./component/home.js";
 
-import { Navbar } from "./component/Navbar.js";
-import { Jumbotron } from "./component/Jumbotron";
-import { Cards } from "./component/Cards";
-import { Footer } from "./component/Footer";
-
-ReactDOM.render(
-	<React.Fragment>
-		<Navbar />
-		<div className="container">
-			<Jumbotron />
-			<div className="d-flex flex-sm-row flex-column">
-				<Cards />
-				<Cards />
-				<Cards />
-				<Cards />
-			</div>
-		</div>
-		<Footer />
-	</React.Fragment>,
-	document.querySelector("#app")
-);
+//render your react application
+ReactDOM.render(<Home />, document.querySelector("#app"));

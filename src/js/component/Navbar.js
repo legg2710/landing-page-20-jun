@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function Navbar() {
+	const [navCollapsed, setNaveCollapsed] = useState(true);
+
+	const handleNavCollapse = () => setNaveCollapsed(!navCollapsed);
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container d-flex">
-				<a className="navbar-brand" href="#">
+				<a
+					className="navbar-brand text-info font-weight-bolder"
+					href="/">
 					Start Bootstrap
 				</a>
 				<button
-					className="navbar-toggler"
+					className="custom-toggler avbar-toggler"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarTogglerDemo02"
-					aria-controls="navbarTogglerDemo02"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-target="#navbarsExample09"
+					aria-controls="navbarsExample09"
+					aria-expanded={!navCollapsed ? true : false}
+					aria-label="Toggle navigation"
+					onClick={handleNavCollapse}>
 					<span className="navbar-toggler-icon"></span>
 				</button>
 

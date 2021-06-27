@@ -10,7 +10,7 @@ export function Home() {
 			<Navbar />
 			<div className="container">
 				<Jumbotron />
-				<div className="d-flex justify-content-between">
+				<div className="d-flex flex-sm-row flex-column">
 					<Card />
 					<Card />
 					<Card />

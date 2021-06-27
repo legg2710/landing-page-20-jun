@@ -2,20 +2,27 @@ import React from "react";
 
 export function Jumbotron() {
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">A Warm Welcome</h1>
-			<p className="lead">
-				This is a simple hero unit, a simple jumbotron-style component
-				for calling extra attention to featured content or information.
-			</p>
+		<div className="jumbotron jumbotron-fluid m-2">
+			<div className="container">
+				<h1 className="display-4">A Warm Welcome</h1>
+				<p className="lead">
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+					irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur.
+				</p>
 
-			<p>
-				It uses utility classes for typography and spacing to space
-				content out within the larger container.
-			</p>
-			<a className="btn btn-primary btn-lg" href="#" role="button">
-				Call to Action!
-			</a>
+				<p className="lead">
+					Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<a
+					className="btn btn-primary btn-lg font-weight-bold"
+					href="#"
+					role="button">
+					Call to Action!
+				</a>
+			</div>
 		</div>
 	);
 }

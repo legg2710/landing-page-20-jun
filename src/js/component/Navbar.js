@@ -1,53 +1,48 @@
 import React, { useState } from "react";
 
 export function Navbar() {
-	const [navCollapsed, setNaveCollapsed] = useState(true);
+	const [navCollapsed, setNavCollapsed] = useState(true);
 
-	const handleNavCollapse = () => setNaveCollapsed(!navCollapsed);
+	const handleNavCollapse = () => setNavCollapsed(!navCollapsed);
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container d-flex">
-				<a
-					className="navbar-brand text-info font-weight-bolder"
-					href="/">
-					Start Bootstrap
-				</a>
-				<button
-					className="custom-toggler avbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarsExample09"
-					aria-controls="navbarsExample09"
-					aria-expanded={!navCollapsed ? true : false}
-					aria-label="Toggle navigation"
-					onClick={handleNavCollapse}>
-					<span className="navbar-toggler-icon"></span>
-				</button>
+			<a className="navbar-brand text-light font-weight-bolder" href="/">
+				Start Bootstrap
+			</a>
+			<button
+				className="custom-toggler navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarsExample09"
+				aria-controls="navbarsExample09"
+				aria-expanded={!navCollapsed ? true : false}
+				aria-label="Toggle navigation"
+				onClick={handleNavCollapse}>
+				<span className="navbar-toggler-icon"></span>
+			</button>
 
-				<ul className="nav justify-content-end ml-auto">
-					<li className="nav-item">
-						<a className="nav-link text-white" href="#">
-							Home
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link text-secondary" href="#">
-							About
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link text-secondary" href="#">
-							Services
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link text-secondary" href="#">
-							Contact
-						</a>
-					</li>
-				</ul>
-			</div>
+			<ul
+				className={`${
+					navCollapsed ? "collapse nav justify-content-end" : ""
+				} navbar-collapse`}
+				id="navbarsExample09">
+				<a className="nav-link text-white" href="/home">
+					Home
+				</a>
+
+				<a className="nav-link text-secondary" href="/about">
+					About
+				</a>
+
+				<a className="nav-link text-secondary" href="/services">
+					Services
+				</a>
+
+				<a className="nav-link text-secondary" href="/contact">
+					Contact
+				</a>
+			</ul>
 		</nav>
 	);
 }
